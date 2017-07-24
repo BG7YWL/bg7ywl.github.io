@@ -1,0 +1,41 @@
+.flexbt {
+	cursor: pointer;
+	margin-right: 5px;
+	width: 64px;
+	height: 22px;
+	background: url(../img/button_style_gametool2.png) 0px 0px no-repeat;
+	float: left;
+	line-height: 22px;
+	text-align: center;
+}
+.flexbt_over {
+	cursor: pointer;
+	margin-right: 5px;
+	width: 64px;
+	height: 22px;
+	background: url(../img/button_style_gametool2.png) 0px -34px no-repeat;
+	float: left;
+	line-height: 22px;
+	text-align: center;
+}
+.flexbt_disabled {
+	cursor: pointer;
+	margin-right: 5px;
+	width: 64px;
+	height: 22px;
+	background: url(../img/button_style_gametool2.png) 0px -102px no-repeat;
+	float: left;
+	line-height: 22px;
+	text-align: center;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+.flexbt_flash {
+	cursor: pointer;
+	margin-right: 5px;
+	width: 64px;
+	height: 22px;
+	float: left;
+	line-height: 22px;
+	text-align: center;
+}

@@ -1,0 +1,80 @@
+html {
+	overflow: hidden;
+	border: 0px none #fff;
+}
+body {
+	margin: 0px;
+	border: 0px none #fff;
+}
+a {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	color: #3366ff
+}
+a:visited {
+	color: #000000
+}
+p {
+	line-height: 2;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	margin-left: 15px;
+}
+#main {
+	font-size: 12px;
+	width: 540px;
+	background: url(../img/softbg2.png) no-repeat;
+	height: 311px;
+	margin: auto;
+	margin-top: 5vh;
+}
+#extend {
+	font-size: 12px;
+	overflow: hidden;
+	width: 540px;
+	background: url(../img/softbg2.png) -540px 0px repeat-y;
+	height: 69px;
+	margin: auto;
+}
+#foot {
+	font-size: 12px;
+	overflow: hidden;
+	width: 540px;
+	background: url(../img/softbg2.png) 0px -311px no-repeat;
+	height: 26px;
+	margin: auto;
+}
+#title {
+	margin-left: 50px;
+	text-align: left;
+	width: 460px;
+	font-size: 17px;
+	font-family: "Î¢ÈíÑÅºÚ", "ºÚÌå";
+	color: #999999;
+	height: 35px;
+	line-height: 35px;
+}
+.tips {
+	width: 506px;
+	height: 24px;
+	padding: 5px;
+	padding-left: 0px;
+	margin: auto;
+	text-align: left;
+}
+.myinput {
+*vertical-align:middle;
+}
+.mycheckbox {
+	vertical-align: middle;
+*margin-top:-5px;
+}
+.highlight {
+	color: red
+}
+.myimg {
+	width:24px;
+}
