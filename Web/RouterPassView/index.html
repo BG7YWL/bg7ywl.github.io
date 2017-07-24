@@ -1,10 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=gb2312">
-<title>·����Ĭ�������ѯ</title>
-<meta name="keywords" content="·����Ĭ�������ѯ" />
-<meta name="description" content="·����Ĭ�������ѯ" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>路由器默认密码查询</title>
+<meta name="keywords" content="路由器默认密码查询" />
+<meta name="description" content="路由器默认密码查询" />
 <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 <link type="text/css" rel="stylesheet" href="css/normal.css" />
 <link type="text/css" rel="stylesheet" href="css/gametool2_button.css" />
@@ -45,33 +45,32 @@
 	var mc=new MyClipboard();
 	mc.button("img/button_style_gametool2.png");
 	mc.getdata=function(){
-		//�˴����ü��а��ֵ
+		//此处设置剪切板的值
 		var cur=datatable.current();
 		if(cur){
-			this._data = "·����Ʒ�Ƽ��ͺ�: "+cur["r"]+"\r\n"+"Ĭ�Ϲ�����ַ: "+(cur["cp"]||"������Ϣ")+"\r\n"+"Ĭ�ϵ�¼�û�����: "+(cur["u"]||"�޻���Ϊ��")+"\r\nĬ�ϵ�¼�û�����: "+(cur["p"]||"��");
+			this._data = "路由器品牌及型号: "+cur["r"]+"\r\n"+"默认管理地址: "+(cur["cp"]||"暂无信息")+"\r\n"+"默认登录用户名称: "+(cur["u"]||"无或者为空")+"\r\n默认登录用户密码: "+(cur["p"]||"空");
 		}else{
-			this._failmsg="����ʧ��\n\n����ѡ��һ������";
+			this._failmsg="复制失败\n\n请先选择一条数据";
 			this._data="";
 		}
 	};
 </script>
 <div id="main">
-  <div id="title">·����Ĭ�������ѯ</div>
-  <div style="width:455px;margin-left:8px;margin-top:5px;height:30px;background:;overflow:hidden;"> ����·����Ʒ�ƻ��ͺ�:
-    <input style="color:#996633" id="textdata" oninput="queryfilter ()" onpropertychange="queryfilter ()" type="text" class="warinput" maxLength="16" onfocus="if(this.value==tip){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value=tip;this.style.color='#996633'}" title="����ʿ����ÿո�򶺺Ÿ���">
-    </input>
+  <div id="title">路由器默认密码查询</div>
+  <div style="width:455px;margin-left:8px;margin-top:5px;height:30px;background:;overflow:hidden;"> 输入路由器品牌或型号:
+    <input style="color:#996633" id="textdata" oninput="queryfilter ()" onpropertychange="queryfilter ()" type="text" class="warinput" maxLength="16" onfocus="if(this.value==tip){this.value='';this.style.color='#000'}" onblur="if(this.value==''){this.value=tip;this.style.color='#996633'}" title="多个词可以用空格或逗号隔开">
   </div>
   <div id="gamebgdata" style="width:520px;border:2px solid #271207;margin-left:8px;height:235px;background:;overflow:hidden;"></div>
   <div id="tablepage" style="position:relative;top:-240px;left:475px;width:50px;height:30px;background:;color:#fff;line-height:30px;text-align:center;"></div>
 </div>
 <script type="text/javascript">
 		var datatable=null;
-		var tip="��������\"TP-Link\" �� \"��Ϊ\"";
+		var tip="例如输入\"TP-Link\" 或 \"华为\"";
 		function initTable(){
 			datatable=new TTable("gamebgdata",{
-				"r":"·��Ʒ�Ƽ��ͺ�",
-				"u":"Ĭ���ʺ�",
-				"p":"Ĭ������"
+				"r":"路由品牌及型号",
+				"u":"默认帐号",
+				"p":"默认密码"
 			},RouterCp,{
 				"css":"width:520px;table-layout:fixed",
 				"css_td":"cursor:default;overflow:hidden;",
@@ -92,13 +91,13 @@
 					"u":129,
 					"p":189
 				},
-				//�����п����ݱ�ȡ��Ϊ��������
-				"na":"�������Ϣ",
+				//表格中空数据被取代为以下内容
+				"na":"无相关信息",
 				"itemClick":function(index,ele){
 					var cur=datatable.current();
-					$("#res").html("·����Ʒ�Ƽ��ͺ�: "+cur["r"]+"<br/><br/>"+"Ĭ�Ϲ�����ַ: "+(cur["cp"]||"������Ϣ")+"<br/><br/>"+"Ĭ�ϵ�¼�û�����: "+(cur["u"]||"�޻���Ϊ��")+"<br/><br/>Ĭ�ϵ�¼�û�����: "+(cur["p"]||"��"));
+					$("#res").html("路由器品牌及型号: "+cur["r"]+"<br/><br/>"+"默认管理地址: "+(cur["cp"]||"暂无信息")+"<br/><br/>"+"默认登录用户名称: "+(cur["u"]||"无或者为空")+"<br/><br/>默认登录用户密码: "+(cur["p"]||"空"));
 				},
-				"errorMsg":"<br/>&nbsp;&nbsp;�Բ���! û���ҵ��������! ������и����ݣ�����ϵ���� near@sina.cn, лл"
+				"errorMsg":"<br/>&nbsp;&nbsp;对不起! 没有找到相关数据! 如果你有该数据，请联系我们 near@sina.cn, 谢谢"
 			},"",8,1);
 		}
 		function queryfilter (){
@@ -117,19 +116,19 @@
 	</script>
 <div id="extend" style="height:177px;">
   <div id="bts" style="margin-top:8px;height:30px;width:415px;margin-left:68px;">
-    <div id="bt_first">��ҳ</div>
-    <div  id="bt_prev" gray="yes">��һҳ</div>
-    <div id="bt_next">��һҳ</div>
-    <div id="bt_last">βҳ</div>
+    <div id="bt_first">首页</div>
+    <div  id="bt_prev" gray="yes">上一页</div>
+    <div id="bt_next">下一页</div>
+    <div id="bt_last">尾页</div>
     <div><script type="text/javascript">
-		mc.init("������ѡ",false,"js/Clipboard.swf",true,"mc");
+		mc.init("复制所选",false,"js/Clipboard.swf",true,"mc");
 			</script></div>
-    <div>ʹ�ð���</div>
+    <div>使用帮助</div>
   </div>
-  <div id="res" style="width:500px;margin-left:8px;margin-top:5px;height:100px;background:#eac89e;overflow-x:hidden;overflow-y:auto;border:2px solid #271207;padding:10px;"> �����Ϸ�����������Ҫ�鿴�ļ�¼�� </div>
+  <div id="res" style="width:500px;margin-left:8px;margin-top:5px;height:100px;background:#eac89e;overflow-x:hidden;overflow-y:auto;border:2px solid #271207;padding:10px;"> 请在上方表格点击你需要查看的记录。 </div>
 </div>
 <div id="foot">
-  <div class="tips" style="padding-top:0px"><a href="http://k1two2.cnblogs.com/" target="_blank">K1two2's Geek Hub</a> - רע������С���߿��� | ���д����뷴�����ͷ� K1two2&nbsp;<img class="myimg" src="img/QQEmail.png"></img>&nbsp;QQ.COM</div>
+  <div class="tips" style="padding-top:0px"><a href="http://k1two2.cnblogs.com/" target="_blank">K1two2's Geek Hub</a> - 专注于在线小工具开发 | 运行错误请反馈至客服 K1two2&nbsp;<img class="myimg" src="img/QQEmail.png">&nbsp;QQ.COM</div>
 </div>
 <script type="text/javascript">
 	regButton("bts",[
@@ -147,7 +146,7 @@
 		},
 		"",
 		function  (){
-			$("#res").html("1. �������ṩ�Ľ�Ϊ·��������Ĭ�����룬����·����Ʒ�Ƽ��ͺŹ��࣬��������һһ��¼����������µ����ݣ�����ϵ���� K1two2&nbsp;#&nbsp;QQ.COM(#&nbsp;-&nbsp;@) , лл!<br/><br/>2. �����������ҵ���������Ȼ�޷���¼ʱ����ȷ�������Ƿ���Ĺ����룻<br/><br/>3. ������������·��������ʱ, ���Գ�������·�������롣һ���г��ϼ��õ�·������һ�����ü���С�ף���ʹ����ǩ��ѹ�ð�ť������ͷţ��ɽ�·��������Ϊ��ʼ���룬�Ե�һ��ʱ������ڵ����ϵ�¼��·������<br/><br/>4. ���û���ҵ�Ʒ��������ͺţ����Գ����ø�Ʒ�Ƶ������ͺŵ�Ĭ�������¼��<br/><br/>5.���δ�ҵ�����ͺţ��볢��ʹ�� admin , admin ����¼��<br/><br/>");
+			$("#res").html("1. 本程序提供的仅为路由器出厂默认密码，由于路由器品牌及型号过多，本程序不能一一收录，如果你有新的数据，请联系我们 K1two2&nbsp;#&nbsp;QQ.COM(#&nbsp;-&nbsp;@) , 谢谢!<br/><br/>2. 当本程序所找到的密码依然无法登录时，请确认他人是否更改过密码；<br/><br/>3. 当您忘记您的路由器密码时, 可以尝试重置路由器密码。一般市场上家用的路由上有一个重置键（小孔），使用牙签按压该按钮多秒后，释放，可将路由器重置为初始密码，稍等一段时间后，再在电脑上登录该路由器。<br/><br/>4. 如果没有找到品牌中你的型号，可以尝试用该品牌的其他型号的默认密码登录。<br/><br/>5.如果未找到你的型号，请尝试使用 admin , admin 来登录。<br/><br/>");
 		}
 	]);
 </script> 
