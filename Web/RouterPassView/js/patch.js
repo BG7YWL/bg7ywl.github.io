@@ -1,4 +1,4 @@
-//±ß¿ò²¹¶¡
+//è¾¹æ¡†è¡¥ä¸
 function __getParam (key){
 	var s=location.search;
 	s=s.replace(/^\?/,"");
@@ -16,9 +16,9 @@ var canvas_pos=__getParam("canvas_pos");
 var customed=__getParam("custom");
 var keyword=__getParam("keyword");
 if(canvas_pos&&canvas_pos=="search"){
-	//Èç¹ûÊÇËÑË÷Ò³Ãæ
+	//å¦‚æœæ˜¯æœç´¢é¡µé¢
 	//if(customed=="1" || keyword){
-		//Èç¹ûÊÇÓÃ»§Ê×Ò³ÊÕ²ØµÄ£¬»òÕßÊÇËÑË÷¹Ø¼ü×ÖËÑË÷µ½µÄ£¬Ôòµ÷ÕûÎ»ÖÃ
+		//å¦‚æœæ˜¯ç”¨æˆ·é¦–é¡µæ”¶è—çš„ï¼Œæˆ–è€…æ˜¯æœç´¢å…³é”®å­—æœç´¢åˆ°çš„ï¼Œåˆ™è°ƒæ•´ä½ç½®
 	document.body.style.marginLeft="0px";
 	//}
 	var bw=0;

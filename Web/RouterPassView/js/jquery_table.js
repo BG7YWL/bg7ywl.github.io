@@ -28,12 +28,12 @@ function TTable (id,header,data,options,index,per,page){
 		"first":"","prev":"","next":"","last":""
 	};
 	options.showpage=options.showpage||"";
-	options.na=options.na||"Î´Öª";
+	options.na=options.na||"æœªçŸ¥";
 	/*script start*/
 	if(header=="tile"){
 		per=options.col*options.row;
 	}
-	//³õÊ¼»¯±í¸ñµÄselectedIndex
+	//åˆå§‹åŒ–è¡¨æ ¼çš„selectedIndex
 	$("#"+id).attr("selectedIndex","-1");
 	data=data||[];
 	if(data.length>0){
@@ -50,7 +50,7 @@ function TTable (id,header,data,options,index,per,page){
 				page=maxpage;
 			}
 			if(maxpage>1){
-				//Èç¹û²»Ö¹Ò»Ò³
+				//å¦‚æœä¸æ­¢ä¸€é¡µ
 				start=per*(page-1);
 				end=per*page<=end?per*page:end
 			}
@@ -74,12 +74,12 @@ function TTable (id,header,data,options,index,per,page){
 			}
 		}
 		if(page==1){
-			//ÔÚÊ×Ò³Ê±
+			//åœ¨é¦–é¡µæ—¶
 			disableBt("first");
 			disableBt("prev");
 		}
 		if(page==maxpage){
-			//ÔÚ×îºóÒ»Ò³Ê±
+			//åœ¨æœ€åä¸€é¡µæ—¶
 			disableBt("last");
 			disableBt("next");
 		}
@@ -245,7 +245,7 @@ function TTable (id,header,data,options,index,per,page){
 		if(options.showpage){
 			$("#"+options.showpage).html("0/0");
 		}
-		$("#"+id).html(options.errorMsg||"<br/>&nbsp;&nbsp;¶Ô²»Æğ! Ã»ÓĞÕÒµ½Ïà¹ØÊı¾İ");
+		$("#"+id).html(options.errorMsg||"<br/>&nbsp;&nbsp;å¯¹ä¸èµ·! æ²¡æœ‰æ‰¾åˆ°ç›¸å…³æ•°æ®");
 	}
 	this.data=newdata;
 	this.page=page;
@@ -289,7 +289,7 @@ function TTable (id,header,data,options,index,per,page){
 		}else{
 			fieldarr=fields;
 		}
-		text=trim(text).replace(/\\/gi,"\\\\").split(/[\s,£¬]+/).join("|");
+		text=trim(text).replace(/\\/gi,"\\\\").split(/[\s,ï¼Œ]+/).join("|");
 		text=text.replace(/([\[\]\{\}\+\?\*\(\)])/g,function($1){
 			return "\\"+$1;
 		});
@@ -321,7 +321,7 @@ function TTable (id,header,data,options,index,per,page){
 		}else{
 			fieldarr=fields;
 		}
-		//text=trim(text).replace(/\\/gi,"\\\\").split(/[\s,£¬]+/).join("|");
+		//text=trim(text).replace(/\\/gi,"\\\\").split(/[\s,ï¼Œ]+/).join("|");
 		var res=[];
 		var newdata=data.slice(0);
 		for(var i=0,l=newdata.length;i<l;i++){

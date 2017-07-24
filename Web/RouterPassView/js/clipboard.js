@@ -5,8 +5,8 @@ function MyClipboard(){
 		_button:"",
 		_textColor:"0",
 		_data:"",
-		_succmsg:"复制成功",
-		_failmsg:"复制失败\n\n复制内容为空",
+		_succmsg:"澶嶅埗鎴愬姛",
+		_failmsg:"澶嶅埗澶辫触\n\n澶嶅埗鍐呭涓虹┖",
 		init:function(text,ret,url,transparent,objname){
 			var str='<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"';
 				str+=' id="Clipboard_'+id+'" width="64" height="22"';
@@ -16,7 +16,7 @@ function MyClipboard(){
 				str+=' 		<param name="bgcolor" value="#869ca7" />';
 				str+=transparent?'		<param name="wmode" value="transparent" />':'';
 				str+=' 		<param name="allowScriptAccess" value="sameDomain" />';
-				str+=(objname||text)?('	<param name="flashvars" value="text='+(text||"复制")+'&object='+(objname||"TmClipboard")+'" />'):'';
+				str+=(objname||text)?('	<param name="flashvars" value="text='+(text||"澶嶅埗")+'&object='+(objname||"TmClipboard")+'" />'):'';
 				str+=' 		<embed style="display:block;margin:0 auto;" src="'+(url||'Clipboard.swf')+'" quality="high" bgcolor="#869ca7"';
 				str+=' 			width="64" height="22" name="Clipboard'+id+'" align="middle"';
 				str+=' 			play="true"';
@@ -24,7 +24,7 @@ function MyClipboard(){
 				str+=' 			quality="high"';
 				str+=transparent?'			wmode="transparent"':'';
 				str+=' 			allowScriptAccess="sameDomain"';
-				str+=(objname||text)?('	flashvars="text='+(text||"复制")+'&object='+(objname||"TmClipboard")+'"'):'';
+				str+=(objname||text)?('	flashvars="text='+(text||"澶嶅埗")+'&object='+(objname||"TmClipboard")+'"'):'';
 				str+=' 			type="application/x-shockwave-flash"';
 				str+=' 			pluginspage="http://www.adobe.com/go/getflashplayer">';
 				str+=' 		</embed>';
