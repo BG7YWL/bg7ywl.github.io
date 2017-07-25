@@ -1,3 +1,4 @@
+@charset "utf-8";
 html {
 	overflow: hidden;
 	border: 0px none #fff;
@@ -52,7 +53,7 @@ p {
 	text-align: left;
 	width: 460px;
 	font-size: 17px;
-	font-family: "Î¢ÈíÑÅºÚ", "ºÚÌå";
+	font-family: "å¾®è½¯é›…é»‘", "é»‘ä½“";
 	color: #999999;
 	height: 35px;
 	line-height: 35px;
